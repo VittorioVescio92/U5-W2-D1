@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "5e9f9b5f-0acc-4f4f-894b-b19ff35cd746",
+		"name": "U5-W2-D1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26374578"
+	},
+	"item": [
+		{
+			"name": "Search Users",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Search Users Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{REQRES_USERS}}?page=2",
+					"host": [
+						"{{REQRES_USERS}}"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single User Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{REQRES_USERS}}/2",
+					"host": [
+						"{{REQRES_USERS}}"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Vittorio\",\r\n    \"job\": \"Vescio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{REQRES_USERS}}",
+					"host": [
+						"{{REQRES_USERS}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update object",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Single Field",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Vittorio_Vescio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{REQRES_USERS}}/567",
+					"host": [
+						"{{REQRES_USERS}}"
+					],
+					"path": [
+						"567"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{REQRES_USERS}}/2",
+					"host": [
+						"{{REQRES_USERS}}"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ajeje.brazorf@reqres.in\",\r\n    \"password\": \"HelpMe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{REQRES_USERS}}/register",
+					"host": [
+						"{{REQRES_USERS}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ajeje.brazorf@reqres.in\",\r\n    \"password\": \"HelpMe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{REQRES_USERS}}/login",
+					"host": [
+						"{{REQRES_USERS}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delayed Response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{REQRES_USERS}}?delay=10",
+					"host": [
+						"{{REQRES_USERS}}"
+					],
+					"query": [
+						{
+							"key": "delay",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "REQRES_USERS",
+			"value": "https://reqres.in/api/users"
+		},
+		{
+			"key": "REQRES_REGISTER",
+			"value": "https://reqres.in/api/register"
+		}
+	]
+}
